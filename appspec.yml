@@ -3,13 +3,13 @@ os: linux
 hooks:
   ApplicationStop:
     - location: scripts/stop.sh
-      runas: owner
+      runas: root
   AfterInstall:
     - location: scripts/compile.sh
       runas: root
   ApplicationStart:
     - location: scripts/start.sh
-      runas: owner
+      runas: root
   ValidateService:
     - location: scripts/verify.sh
-      runas: owner
+      runas: root
