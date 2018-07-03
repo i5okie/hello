@@ -29,8 +29,8 @@ echo $?
 
 # Move release into run location, allow execute by owner
 mkdir -p /var/app/current
-chown owner /var/app/current
+chown root /var/app/current
 cp _build/prod/rel/$APP_NAME/releases/$VERSION/$APP_NAME.tar.gz /var/app/current/$APP_NAME.tar.gz
 cd /var/app/current
 tar -xzf $APP_NAME.tar.gz
-chown -R owner ./*
+chown -R root ./*
