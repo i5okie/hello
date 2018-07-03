@@ -1,5 +1,9 @@
 #!/usr/bin/bash
 
+# Init ASDF
+. /opt/.asdf/asdf.sh
+. /opt/.asdf/completions/asdf.bash
+
 cd /opt/codedeploy-agent/deployment-root/$DEPLOYMENT_GROUP_ID/$DEPLOYMENT_ID/deployment-archive
 
 ### Update these values for your own S3 bucket ###
