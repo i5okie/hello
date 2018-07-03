@@ -6,6 +6,10 @@
 
 cd /opt/codedeploy-agent/deployment-root/$DEPLOYMENT_GROUP_ID/$DEPLOYMENT_ID/deployment-archive
 
+# ASDF
+asdf global elixir 1.6.6
+asdf global erlang 19.3
+
 ### Update these values for your own S3 bucket ###
 SECRETS_S3_BUCKET=phoenix-app-secrets-store
 S3_BUCKET_REGION=us-west-2
