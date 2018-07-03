@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/bash
 cd /var/app/current
 
 if [ -e ./bin/phoenix ]
