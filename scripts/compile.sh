@@ -31,14 +31,14 @@ npm install
 
 # Build assets and release
 ./node_modules/brunch/bin/brunch build --production
-MIX_ENV=prod mix phoenix.digest
+MIX_ENV=prod mix phx.digest
 MIX_ENV=prod mix release --env=prod
 echo $?
 
 # Move release into run location, allow execute by owner
 mkdir -p /var/app/current
 chown root /var/app/current
-cp _build/prod/rel/$APP_NAME/releases/$VERSION/$APP_NAME.tar.gz /var/app/current/$APP_NAME.tar.gz
+cp rel/$APP_NAME/releases/$VERSION/$APP_NAME.tar.gz /var/app/current/$APP_NAME.tar.gz
 cd /var/app/current
 tar -xzf $APP_NAME.tar.gz
 chown -R root ./*
