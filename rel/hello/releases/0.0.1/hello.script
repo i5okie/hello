@@ -1,5 +1,5 @@
 %% coding: utf-8
-%% script generated at {2018,7,3} {15,12,31}
+%% script generated at {2018,7,3} {15,28,47}
 {script,
     {"hello","0.0.1"},
     [{preLoaded,
