@@ -27,10 +27,12 @@ rm creds.txt
 mix local.hex --force
 mix local.rebar --force
 mix deps.get
-npm install
 
 # Build assets and release
+cd assets
+npm install
 ./node_modules/brunch/bin/brunch build --production
+cd ..
 MIX_ENV=prod mix phx.digest
 MIX_ENV=prod mix release --env=prod
 echo $?
@@ -42,3 +44,4 @@ cp rel/$APP_NAME/releases/$VERSION/$APP_NAME.tar.gz /var/app/current/$APP_NAME.t
 cd /var/app/current
 tar -xzf $APP_NAME.tar.gz
 chown -R root ./*
+rm -f $APP_NAME.tar.gz

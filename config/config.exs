@@ -12,7 +12,7 @@ config :hello,
 # Configures the endpoint
 config :hello, HelloWeb.Endpoint,
   url: [host: "localhost"],
-  secret_key_base: "WwVR0h2wTXNljV6xOUVcSgVN9VMXlVcEE9XvAUUhu9EMhl33Sn2sze72z/vrKwuh",
+  secret_key_base: "DKuM30ucCC75VVbeKT6k92ALT30RLN+Fw8/Ip5p70G34D/DgRJPejIYw4CCi3kXM",
   render_errors: [view: HelloWeb.ErrorView, accepts: ~w(html json)],
   pubsub: [name: Hello.PubSub,
            adapter: Phoenix.PubSub.PG2]
